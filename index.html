@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Movies App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="app">
+    <!-- Контейнер для строки поиска, фильтра и кнопки Watchlist -->
+    <div class="search-container">
+      <input type="text" id="search-bar" placeholder="Search for movies...">
+      <select id="filter-options">
+        <option value="popular">Popular</option>
+        <option value="upcoming">Upcoming</option>
+        <option value="top_rated">Top Rated</option>
+        <option value="now_playing">Now Playing</option>
+      </select>
+      <button id="view-watchlist">View Watchlist</button>
+      <button id="back-to-home" style="display: none;">Back to Home</button>
+    </div>
+    
+    <!-- Контейнер для списка фильмов -->
+    <div id="movie-list"></div>
+    
+    <!-- Контейнер для кнопок пагинации (размещен ниже списка фильмов) -->
+    <div class="pagination-container">
+      <button id="prev-page" disabled>Previous</button>
+      <button id="next-page">Next</button>
+    </div>
+  </div>
+
+  <!-- Модальное окно для детальной информации о фильме -->
+  <div id="movie-modal" class="modal hidden">
+    <div class="modal-content">
+      <span class="close-button">&times;</span>
+      <div id="movie-details"></div>
+    </div>
+  </div>
+  
+  <script src="script.js"></script>
+</body>
+</html>
